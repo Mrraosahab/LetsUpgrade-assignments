@@ -1,0 +1,61 @@
+<!-- Question = 1
+Create a webpage containing an image and three buttons
+A. On click of the second button a change the existing image to a new image
+B. On click of the third button change it once again
+C. On click of first, the first image should come back -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Question 1</title>
+</head>
+<body>
+    <p class="para">This is a webpage, here...<br><b>1.</b>On click of the second button a change the existing image to a new image  <b>2.</b>On click of the third button change it once again  <b>3.</b>On click of first, the first image should come back
+        
+    </p>
+    <!-- lets create a container, which includes image and buttons -->
+    <div id="container">
+        
+       <img id="myImage" src="img1.png" width="280"><br><br>
+       
+       <button class="button_s" onclick="document.getElementById('myImage').src='img1.png'">Button1</button> 
+       <button class="button_s" onclick="document.getElementById('myImage').src='img2.jpg'">Button2</button> 
+       <button class="button_s" onclick="document.getElementById('myImage').src='img3.png'">Button3</button> 
+       
+    </div>
+    <!-- container ends here -->
+
+    
+    <!-- lets create css style for beautiful webpage  -->
+    <style type="text/css">
+        
+        body{
+            background-color: yellow;
+        }
+        #container{
+            text-align: center;
+            margin-top: 150px;
+            background-color: white;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+
+        .button_s{
+            background-color: blue;
+            color: cornsilk;
+            font-size: 25px;
+        }
+
+        .para{
+            margin-top: 50px;
+            text-align: center;
+            background-color: red;
+            font-size: 20px;
+        }
+    </style>
+    <!-- style ends here -->
+</body>
+</html>

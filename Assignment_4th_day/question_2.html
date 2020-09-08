@@ -1,0 +1,79 @@
+<!-- Question 2
+Create a webpage containing two input fields and a button.
+A. Write something in the first input
+B. On click of the button, the content of input one should be copied in the second input -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Question 2</title>
+
+
+</head>
+
+
+<body>
+    <!-- lets write some JavaScript code to implement the function named populateSecondTextBox -->
+    <script>
+        function populateSecondTextBox() {
+            document.getElementById('txtSecond').value = document.getElementById('txtFirst').value;
+        }
+    </script>
+
+    <!-- start a div container so we can easily maintain the code and layout -->
+    <div id="container">
+        <p class="para">Write something in text box 1 and then click on the green button <b>Click Here</b> The entire
+            text given to box 1 will be copy in box 2</p>
+        Box 1:<input type="text" id="txtFirst" placeholder="Your Answer"><br><br>
+        <input type="button" class="btn" name="btn" value="click here"
+            onclick="populateSecondTextBox(this.form)"><br><br>
+        Box 2:<input type="text" id="txtSecond" placeholder="Your Answer will be copy here">
+    </div>
+
+
+    <!-- lets Create some CSS to implement styles and give beautiful look to webpage -->
+    <style type="text/css">
+        body {
+            background-color: yellow;
+        }
+
+        #container {
+            text-align: center;
+            margin-top: 200px;
+            background-color: chartreuse;
+            padding-bottom: 40px;
+        }
+
+        #txtFirst {
+            font-size: 20px;
+            /* background-color: green; */
+            border: black solid 4px;
+        }
+
+        #txtSecond {
+            font-size: 20px;
+            /* background-color: green; */
+            border: black solid 4px;
+        }
+
+        .btn {
+            background-color: blue;
+            font-size: 20px;
+            border: black solid 2px;
+            color: white;
+        }
+
+        .para {
+            background-color: maroon;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+
+</body>
+
+</html>
